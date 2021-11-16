@@ -1,0 +1,10 @@
+{
+  "trailingComma": "none",
+  "singleQuote": true,
+  "overrides": [
+    {
+      "files": "**/*.{json,ts}",
+      "options": { "useTabs": true, "tabWidth": 3, "printWidth": 350 }
+    }
+  ]
+}
