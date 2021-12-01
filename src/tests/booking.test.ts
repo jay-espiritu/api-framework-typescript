@@ -2,8 +2,20 @@ import { HttpMethods } from '../helpers';
 import { StatusCodes } from 'http-status-codes';
 
 describe('Booking tests', () => {
-	it('Create booking', async () => {
-		const response = await HttpMethods.postRequest('/booking');
+	it.only('Create booking', async () => {
+		const data = {
+			firstname: 'Jim',
+			lastname: 'Brown',
+			totalprice: 111,
+			depositpaid: true,
+			bookingdates: {
+				checkin: '2018-01-01',
+				checkout: '2019-01-01'
+			},
+			additionalneeds: 'Breakfast'
+		};
+		const response = await HttpMethods.postRequest('/booking', data);
+		const test = '';
 	});
 
 	it('Update booking', async () => {
